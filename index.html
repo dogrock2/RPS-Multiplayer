@@ -1,0 +1,134 @@
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RockPaperScissor</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container ">
+
+        <div class="row text-center">
+            <div class="col-md-12">
+                <header class="my-3">Rock Paper Scissor</header>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <section>
+                    <div class="d-inline-block m-2">
+                        <img src='assets/images/rock.png' class='myImg' id="pImg" alt='Image not found'>
+                    </div>
+                    <div class="d-inline-block m-2">
+                        <img src='assets/images/paper.png' class='myImg' id="cImg" alt='Image not found'>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-12 my-4 font-weight-bold">
+                <span id="message">Click to begin.</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 text-center font-italic pt-5">Oponent Name: <span id="oponentName" class="font-weight-bold">Computer</span>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src='assets/images/rock.png' class='butImg' alt='Image not found' vals="r">
+                <img src='assets/images/paper.png' class='butImg' alt='Image not found' vals="p">
+                <img src='assets/images/scissors.png' class='butImg' alt='Image not found' vals="s">
+            </div>
+            <div class="col-md-3 text-center font-italic pt-5" id="onlineCntStr">
+                <span id="onlineCntTotal" class="font-weight-bold">0</span>
+                <span>players online</span>
+                <div class="form-group">
+                    <select class="form-control" id="playersNamesAvail"></select>
+                </div>
+            </div>
+
+        </div>
+        <div class="row text-center">
+            <div class="col-md-3 mt-2">
+                <section>
+                    <table class="table table-striped">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>Player</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Wins</th>
+                                <td><span id="wins">0</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Loses</th>
+                                <td><span id="loses">0</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tied</th>
+                                <td><span id="tied">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <div class="card mt-2 mb-5 rounded">
+                    <div class="card-block">
+                        <h5 class="card-title text-white py-2 rounded" id="chatHeading">Chat</h5>
+                        <div class="px-2">
+                            <textarea class="form-control mb-1" id="textarea" rows="3" disabled></textarea>
+                        </div>
+                        <div class="pb-1">
+                            <input type="text" class="form-control d-inline w-50 text-begin mr-2" id="chatInput">
+                            <button type='button' class="btn btn-success mb-1" id="subBtn">Submit</button>
+                            <button type='button' class="btn btn-warning mb-1" id="acptBtn">Accept</button>
+                            <button type='button' class="btn btn-danger mb-1" id="rjtBtn">Reject</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mt-2 mb-5 rounded">
+                    <div class="card-block">
+                        <h5 class="card-title text-white py-2 rounded" id="chatHeading">Players</h5>
+                        <div class="pl-2">
+                            <div class="custom-controls-stacked">
+                                <label class="custom-control custom-radio">
+                                <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input"
+                                       checked>
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">1 Player <span class="smallText" id='andDisc'> ( &amp; disconnect )</span></span>
+                            </label>
+                                <label class="custom-control custom-radio">
+                                <input id="radioStacked2" name="radio-stacked" type="radio"
+                                       class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">2 Players <span class="smallText">( Enter your Name )</span></span>
+                            </label>
+                            </div>
+                        </div>
+                        <div class="pb-1">
+                            <input type="text" class="form-control d-inline w-50 text-begin mt-4 mr-2" id="nameInput">
+                            <button type="button" class="btn btn-primary mb-1" id="connectB">Connect</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

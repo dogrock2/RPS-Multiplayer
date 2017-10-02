@@ -1,0 +1,33 @@
+header{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+}
+
+.myImg{    
+	height: 300px;
+    width: 300px;	   		
+}
+
+.butImg{
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
+.butImg:hover{
+    height: 48px;
+    width: 48px;
+    border: 2px solid black;
+}
+#chatHeading{
+    background-color: black;
+}
+#textarea {
+    resize: none;
+    background-color: white;
+}
+#settingsInput{
+    
+}
+.smallText{  
+    font-size: 12px;
+}
