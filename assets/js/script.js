@@ -465,8 +465,7 @@ $().ready(function () {
             database.ref("/" + name).remove();  
               
         $('#playersNamesAvail').html('');
-        init();
-        //remove you from list and update cnt
+        init();        
         $('#onlineCntTotal').text(cnt);
     } //ends disconnect
     
@@ -474,7 +473,7 @@ $().ready(function () {
     initFirebase();
 
     $(window).unload(function () {
-        database.ref("/" + name).remove();
+        disconnect();        
     });
 
 }); //ends ready
